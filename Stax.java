@@ -30,7 +30,7 @@ public class Stax {
 		
 		for (int counter = 0; counter > -1; counter++) {
 			
-			System.out.println("gimme a string, if ya wanna pop it type pop");
+			System.out.println("gimme a string, or type pop (remove from stack), peek(look at first item), or clear(clear stack)");
 			
 			numbahString = br.readLine();
 			
@@ -42,6 +42,21 @@ public class Stax {
 				catch (EmptyStackException e)
 				{
 					System.out.println("There's nothing left on the stack to pop!");
+				}
+				
+			} else if (numbahString.equals("clear")){
+				
+				stackOne.clear();
+				System.out.println("Stack cleared.");
+				
+			} else if (numbahString.equals("peek")){
+				
+				try {
+					System.out.println(stackOne.peek());
+				}
+				catch (EmptyStackException e)
+				{
+					System.out.println("Nothing left on the stack to peek at!");
 				}
 				
 			} else {
