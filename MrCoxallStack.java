@@ -41,5 +41,30 @@ public class MrCoxallStack<Item> {
 		
 	}
 	
+	public Item peek() {
+		
+		Item returnValue;
+		
+		if (al.size() == 0) {
+			
+			throw new EmptyStackException();
+			
+		} else {
+		
+			int lastIndex =	al.size() - 1; 
+		
+			returnValue = al.get(lastIndex);
+		
+		}
+		
+		return returnValue;
+		
+	}
+	
+	public void clear(){
+		
+		al.clear();
+		
+	}
 	
 }
